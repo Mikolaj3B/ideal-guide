@@ -3,3 +3,23 @@
     margin: 0;
     box-sizing: border-box;
 }
+.container{
+    display: flex;
+    flex-wrap: wrap;
+}
+header{
+    width: 100%;
+}
+nav{
+    width:25%;
+}
+main{
+    width:50%;
+}
+aside{
+    width:25%;
+}
+
+footer{
+    width: 100%;
+}
