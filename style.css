@@ -8,18 +8,22 @@
     flex-wrap: wrap;
 }
 header{
+    background-color: aqua;
     width: 100%;
 }
-nav{
-    width:25%;
-}
 main{
-    width:50%;
+    background-color: gainsboro;
+    width:75%;
+}
+main>article{
+    width: 50%;
+    background-color: gray;
 }
 aside{
+    background-color: lightskyblue;
     width:25%;
 }
-
 footer{
+    background-color: mediumblue;
     width: 100%;
 }
