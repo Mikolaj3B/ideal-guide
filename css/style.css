@@ -6,21 +6,52 @@
 body {
   background-color: #edebe9;
 }
+.calosc {
+  display: flex;
+}
 .szachownica {
   display: grid;
-  margin: auto;
+  margin: 0 auto;
+  margin-top: 5em;
   grid-template-columns: repeat(8, 100px);
   grid-template-rows: repeat(8, 100px);
 }
-.szachownica > * {
-  width: auto;
+.numalf {
+  position: relative;
+  bottom: -100px;
+  left: 5px;
 }
-.notacjanum {
-  display: flex;
+.numlic {
+  position: relative;
+  left: 105px;
 }
-.notacjaalf {
-  display: flex;
+@media (max-width: 640px) {
+  .szachownica {
+    grid-template-columns: repeat(8, 50px);
+    grid-template-rows: repeat(8, 50px);
+  }
+  .numalf {
+    bottom: -50px;
+  }
+  .numlic {
+    left: 52px;
+  }
+  i {
+    font-size: small;
+  }
 }
-.notacja {
-  display: flex;
-}
+@media (min-width: 640px) and (max-width: 1024px) {
+  .szachownica {
+    grid-template-columns: repeat(8, 75px);
+    grid-template-rows: repeat(8, 75px);
+  }
+  .numalf {
+    bottom: -75px;
+  }
+  .numlic {
+    left: 78px;
+  }
+  i {
+    font-size: medium;
+  }
+} /* <640px, <1024px, >=1024px */
