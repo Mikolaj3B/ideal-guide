@@ -8,10 +8,12 @@ body {
 }
 .calosc {
   display: flex;
+  flex-wrap: wrap;
 }
 .szachownica {
   display: grid;
   margin: 0 auto;
+
   margin-top: 5em;
   grid-template-columns: repeat(8, 100px);
   grid-template-rows: repeat(8, 100px);
@@ -20,10 +22,36 @@ body {
   position: relative;
   bottom: -100px;
   left: 5px;
+  cursor: default;
 }
 .numlic {
   position: relative;
   left: 105px;
+  cursor: default;
+}
+.lista {
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 12%;
+  margin-top: 5em;
+}
+.lista > * {
+  width: 100%;
+  padding: 0.2em;
+  border-radius: 5px;
+  margin: 0.1em;
+  cursor: pointer;
+}
+.wiekszytext {
+  font-size: x-large;
+  font-weight: 900;
+  cursor: default;
+}
+i {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 @media (max-width: 640px) {
   .szachownica {
@@ -39,6 +67,9 @@ body {
   i {
     font-size: small;
   }
+  .lista {
+    flex-basis: 100%;
+  }
 }
 @media (min-width: 640px) and (max-width: 1024px) {
   .szachownica {
@@ -53,5 +84,8 @@ body {
   }
   i {
     font-size: medium;
+  }
+  .lista {
+    flex-basis: 15%;
   }
 } /* <640px, <1024px, >=1024px */
