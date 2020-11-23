@@ -112,9 +112,9 @@ i {
     left: 123px;
   }
   i {
-    font-size: medium;
+    font-size: x-large;
     margin: 0 auto;
-    padding: 0.2em;
+    padding: 0.1em;
   }
   .lista {
     margin: 0 auto;
@@ -146,9 +146,9 @@ i {
     left: 105px;
   }
   i {
-    font-size: medium;
+    font-size: larger;
     margin: 0 auto;
-    padding: 0.2em;
+    padding: 0.1em;
   }
   .lista {
     flex-basis: 40%;
@@ -180,8 +180,8 @@ i {
     left: 83px;
   }
   i {
-    font-size: medium;
-    padding: 0.2em;
+    font-size: larger;
+    padding: 0.1em;
   }
   .lista {
     margin: 0 auto;
@@ -214,7 +214,7 @@ i {
   }
   i {
     font-size: larger;
-    padding: 0.2em;
+    padding: 0.1em;
   }
   .lista {
     margin: 0 auto;
