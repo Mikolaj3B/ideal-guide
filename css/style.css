@@ -10,10 +10,20 @@ body {
   display: flex;
   flex-wrap: wrap;
 }
+.info {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5em;
+  margin-left: 3em;
+  font-size: larger;
+  flex-basis: 10%;
+}
+#nazwa {
+  font-size: xx-large;
+}
 .szachownica {
   display: grid;
   margin: 0 auto;
-
   margin-top: 5em;
   grid-template-columns: repeat(8, 100px);
   grid-template-rows: repeat(8, 100px);
@@ -71,6 +81,9 @@ i {
   .lista {
     flex-basis: 100%;
   }
+  .info {
+    flex-basis: 100%;
+  }
 }
 @media (min-width: 640px) and (max-width: 1024px) {
   .szachownica {
@@ -87,6 +100,9 @@ i {
     font-size: medium;
   }
   .lista {
-    flex-basis: 15%;
+    flex-basis: 100%;
+  }
+  .info {
+    flex-basis: 100%;
   }
 } /* <640px, <1024px, >=1024px */

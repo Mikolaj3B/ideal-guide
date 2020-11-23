@@ -7,6 +7,13 @@
 </head>
 <body onload="rysowaniedomyslne()">
     <div class="calosc">
+        <div class="info">
+            <i id="nazwa"> </i>
+            <i id="pierwszy"> </i>
+            <i id="drugi"> </i>
+            <i id="trzeci"> </i>
+            <i id="czwarty"> </i>
+        </div>
     <div class="szachownica">
         <div id="1"></div>
         <div id="2"></div>
@@ -74,7 +81,7 @@
         <div id="64"> <i class="numlic">1</i><i class="numalf">h</i></div>
  </div>
  <div class="lista">
-<i onclick="rysowaniedomyslne()">Reset</i>
+<i onclick="czyszczenie()">Reset</i>
 <i class="wiekszytext">Partie otwarte</i>
 <i onclick="hiszpanska()">Partia hiszpańska</i>
 <i onclick="wloska()">Partia włoska</i>
@@ -153,6 +160,13 @@ queen="/css/png/queen.png"
 king="/css/png/king.png";
 rook="/css/png/rook.png";
 //rysowanie ustawienia domyslnego
+function czyszczenie(){
+    document.getElementById("nazwa").innerHTML="";
+    document.getElementById("pierwszy").innerHTML="";
+    document.getElementById("drugi").innerHTML="";
+    document.getElementById("trzeci").innerHTML="";
+    rysowaniedomyslne();
+}
 function rysowaniedomyslne(){
 for (i=0; i < 8; i++) {
     for(j=0;j<8;j++){
@@ -266,6 +280,10 @@ function hiszpanska(){
     ruch("f",3,"g",1,knightw);
     ruch("c",6,"b",8,knight);
     ruch("b",5,"f",1,bishopw);
+    document.getElementById("nazwa").innerHTML="Partia hiszpańska";
+    document.getElementById("pierwszy").innerHTML="1. e4 e5";
+    document.getElementById("drugi").innerHTML="2. Sf3 Sc6";
+    document.getElementById("trzeci").innerHTML="3. Gb5";
 } 
 function wloska(){
     rysowaniedomyslne();
@@ -274,82 +292,138 @@ function wloska(){
     ruch("c",6,"b",8,knight);
     ruch("c",4,"f",1,bishopw);
     ruch("c",5,"f",8,bishop);
+    document.getElementById("nazwa").innerHTML="Partia włoska";
+    document.getElementById("pierwszy").innerHTML="1. e4 e5";
+    document.getElementById("drugi").innerHTML="2. Sf3 Sc6";
+    document.getElementById("trzeci").innerHTML="3. Gc4 Gc5";
 }
 function gambitkrol(){
     rysowaniedomyslne();
     e4e5();
     ruch("f",4,"f",2,pawnw);
+    document.getElementById("nazwa").innerHTML="Gambit królewski";
+    document.getElementById("pierwszy").innerHTML="1. e4 e5";
+    document.getElementById("drugi").innerHTML="2. f4";
+    document.getElementById("trzeci").innerHTML="";
 }
 function obronadwoch(){
     rysowaniedomyslne();
     e4e5();
     ruch("f",3,"g",1,knightw);
     ruch("c",6,"b",8,knight);
-    ruch("f",6,"g",8,knight);
     ruch("c",4,"f",1,bishopw);
+    ruch("f",6,"g",8,knight);
+    document.getElementById("nazwa").innerHTML="Obrona dwóch skoczków";
+    document.getElementById("pierwszy").innerHTML="1. e4 e5";
+    document.getElementById("drugi").innerHTML="2. Sf3 Sc6";
+    document.getElementById("trzeci").innerHTML="3. Gc4 Sf6";
 }
 function obronaros(){
     rysowaniedomyslne();
     e4e5();
     ruch("f",3,"g",1,knightw);
     ruch("f",6,"g",8,knight);
+    document.getElementById("nazwa").innerHTML="Obrona rosyjska";
+    document.getElementById("pierwszy").innerHTML="1. e4 e5";
+    document.getElementById("drugi").innerHTML="2. Sf3 Sf6";
+    document.getElementById("trzeci").innerHTML="";
 }
 function partiaszkoc(){
     rysowaniedomyslne();
     e4e5();
     ruch("f",3,"g",1,knightw);   
-    ruch("c",6,"b",8,knight);
     ruch("d",4,"d",2,pawnw);
+    ruch("c",6,"b",8,knight);
+    document.getElementById("nazwa").innerHTML="Partia szkocka";
+    document.getElementById("pierwszy").innerHTML="1. e4 e5";
+    document.getElementById("drugi").innerHTML="2. Sf3 d4";
+    document.getElementById("trzeci").innerHTML="3. Sc6";
 }
 function partiawied(){
     rysowaniedomyslne();
     e4e5();
     ruch("c",3,"b",1,knightw);    
+    document.getElementById("nazwa").innerHTML="Partia wiedeńska";
+    document.getElementById("pierwszy").innerHTML="1. e4 e5";
+    document.getElementById("drugi").innerHTML="2. Sc3";
+    document.getElementById("trzeci").innerHTML="";
 }
 function obronasyc(){
     rysowaniedomyslne();
     ruch("e",4,"e",2,pawnw);
     ruch("c",5,"c",7,pawn); 
+    document.getElementById("nazwa").innerHTML="Obrona sycylijska";
+    document.getElementById("pierwszy").innerHTML="1. e4 c5";
+    document.getElementById("drugi").innerHTML="";
+    document.getElementById("trzeci").innerHTML="";
 }
 function obronafran(){
     rysowaniedomyslne();
     ruch("e",4,"e",2,pawnw);
     ruch("e",6,"e",7,pawn);
+    document.getElementById("nazwa").innerHTML="Obrona francuska";
+    document.getElementById("pierwszy").innerHTML="1. e4 e6";
+    document.getElementById("drugi").innerHTML="";
+    document.getElementById("trzeci").innerHTML="";
 }
 function obronacaro(){
     rysowaniedomyslne();
     ruch("e",4,"e",2,pawnw);
     ruch("c",6,"c",7,pawn);    
+    document.getElementById("nazwa").innerHTML="Obrona Caro-Kann";
+    document.getElementById("pierwszy").innerHTML="1. e4 c6";
+    document.getElementById("drugi").innerHTML="";
+    document.getElementById("trzeci").innerHTML="";
 }
 function obronaskand(){
     rysowaniedomyslne();
     ruch("e",4,"e",2,pawnw);
     ruch("d",5,"d",7,pawn); 
+    document.getElementById("nazwa").innerHTML="Obrona skandynawska";
+    document.getElementById("pierwszy").innerHTML="1. e4 d5";
+    document.getElementById("drugi").innerHTML="";
+    document.getElementById("trzeci").innerHTML="";
 }
 function obronaale(){
     rysowaniedomyslne();
     ruch("e",4,"e",2,pawnw);
     ruch("f",6,"g",8,knight);
+    document.getElementById("nazwa").innerHTML="Obrona Alechina";
+    document.getElementById("pierwszy").innerHTML="1. e4 Sf6";
+    document.getElementById("drugi").innerHTML="";
+    document.getElementById("trzeci").innerHTML="";
 }
 function obronapier(){
     rysowaniedomyslne();
     ruch("e",4,"e",2,pawnw);
     ruch("d",6,"d",7,pawn);
     ruch("d",4,"d",2,pawnw);
-    ruch("c",3,"b",1,knightw);
     ruch("f",6,"g",8,knight);
+    ruch("c",3,"b",1,knightw);
     ruch("g",6,"g",7,pawn);
+    document.getElementById("nazwa").innerHTML="Obrona Pirca";
+    document.getElementById("pierwszy").innerHTML="1. e4 d6";
+    document.getElementById("drugi").innerHTML="2. d4 Sf6";
+    document.getElementById("trzeci").innerHTML="3. Sc3 g6";
 }
 function debiutnim(){
     rysowaniedomyslne();
     ruch("e",4,"e",2,pawnw);
     ruch("c",6,"b",8,knight);
+    document.getElementById("nazwa").innerHTML="Debiut Nimzowitscha";
+    document.getElementById("pierwszy").innerHTML="1. e4 Sc6";
+    document.getElementById("drugi").innerHTML="";
+    document.getElementById("trzeci").innerHTML="";
 }
 function gambithet(){
     rysowaniedomyslne();
     ruch("d",4,"d",2,pawnw);
     ruch("d",5,"d",7,pawn);
     ruch("c",4,"c",2,pawnw);
+    document.getElementById("nazwa").innerHTML="Gambit hetmański";
+    document.getElementById("pierwszy").innerHTML="1. d4 d5";
+    document.getElementById("drugi").innerHTML="2. c4";
+    document.getElementById("trzeci").innerHTML="";
 }
 function obronakrol(){
     rysowaniedomyslne();
@@ -359,6 +433,10 @@ function obronakrol(){
     ruch("g",6,"g",7,pawn);
     ruch("c",3,"b",1,knightw);   
     ruch("g",7,"f",8,bishop);
+    document.getElementById("nazwa").innerHTML="Obrona królewsko-indyjska";
+    document.getElementById("pierwszy").innerHTML="1. d4 Sf6";
+    document.getElementById("drugi").innerHTML="2. c4 g6";
+    document.getElementById("trzeci").innerHTML="3. Sc3 Gg7";
 }
 function obronahetma(){
     rysowaniedomyslne();
@@ -368,10 +446,18 @@ function obronahetma(){
     ruch("e",6,"e",7,pawn);
     ruch("f",3,"g",1,knightw);
     ruch("b",6,"b",7,pawn);
+    document.getElementById("nazwa").innerHTML="Obrona hetmańsko-indyjska";
+    document.getElementById("pierwszy").innerHTML="1. d4 Sf6";
+    document.getElementById("drugi").innerHTML="2. c4 e6";
+    document.getElementById("trzeci").innerHTML="3. Sf3 b6";
 }
 function partiaang(){
     rysowaniedomyslne();
     ruch("c",4,"c",2,pawnw);
+    document.getElementById("nazwa").innerHTML="Partia angielska";
+    document.getElementById("pierwszy").innerHTML="1. c4";
+    document.getElementById("drugi").innerHTML="";
+    document.getElementById("trzeci").innerHTML="";
 }
 function obronanim(){
     rysowaniedomyslne();
@@ -381,11 +467,19 @@ function obronanim(){
     ruch("e",6,"e",7,pawn);
     ruch("c",3,"b",1,knightw);
     ruch("b",4,"f",8,bishop);
+    document.getElementById("nazwa").innerHTML="Obrona Nimzowitscha";
+    document.getElementById("pierwszy").innerHTML="1. d4 Sf6";
+    document.getElementById("drugi").innerHTML="2. c4 e6";
+    document.getElementById("trzeci").innerHTML="3. Sc3 Gb4";
 }
 function obronahol(){
     rysowaniedomyslne();
     ruch("d",4,"d",2,pawnw);
     ruch("f",5,"f",7,pawn);
+    document.getElementById("nazwa").innerHTML="Obrona holenderska";
+    document.getElementById("pierwszy").innerHTML="1. d4 f5";
+    document.getElementById("drugi").innerHTML="";
+    document.getElementById("trzeci").innerHTML="";
 }
 function partiakat(){
     rysowaniedomyslne();
@@ -396,6 +490,10 @@ function partiakat(){
     ruch("g",3,"g",2,pawnw);
     ruch("d",5,"d",7,pawn);
     ruch("g",2,"f",1,bishopw);
+    document.getElementById("nazwa").innerHTML="Partia katalońska";
+    document.getElementById("pierwszy").innerHTML="1. d4 Sf6";
+    document.getElementById("drugi").innerHTML="2. c4 e6";
+    document.getElementById("trzeci").innerHTML="3. g3 d5 <br> 4. Gg2";
 }
 function obronagrun(){
     rysowaniedomyslne();
@@ -405,10 +503,18 @@ function obronagrun(){
     ruch("g",6,"g",7,pawn);
     ruch("c",3,"b",1,knightw);
     ruch("d",5,"d",7,pawn);
+    document.getElementById("nazwa").innerHTML="Obrona Grünfelda";
+    document.getElementById("pierwszy").innerHTML="1. d4 Sf6";
+    document.getElementById("drugi").innerHTML="2. c4 g6";
+    document.getElementById("trzeci").innerHTML="3. Sc3 d5";
 }
 function otwarcieret(){
     rysowaniedomyslne();
     ruch("f",3,"g",1,knightw);
+    document.getElementById("nazwa").innerHTML="Otwarcie Rétiego";
+    document.getElementById("pierwszy").innerHTML="1. Sf3";
+    document.getElementById("drugi").innerHTML="";
+    document.getElementById("trzeci").innerHTML="";
 }
 </script>
 
