@@ -56,19 +56,16 @@ body {
     justify-content: space-between;
     width: 100%;
   }
-  .nav__chess {
-    border: none;
-  }
   .nav__chess--image {
     @include imgformat();
     margin-right: 2em;
   }
-  .nav__chart {
-    border: none;
-  }
   .nav__chart--image {
     @include imgformat();
     margin-left: 2em;
+  }
+  .transition {
+    border: none;
   }
 }
 .footer {
