@@ -7,12 +7,14 @@ body {
   background-color: #000000;
   background-image: url("https://wallpaperaccess.com/full/1698006.jpg");
   background-size: 100% 150%;
+  height: 100%;
 }
 .logo {
   width: 6em;
   cursor: pointer;
 }
 .container {
+  min-height: 100%;
   display: flex;
   flex-wrap: wrap;
   margin-top: -6em;

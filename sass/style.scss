@@ -26,14 +26,9 @@ body {
   background-image: url("imgs/bg.png");
   background-size: 100% 150%;
 }
-.logo {
-  width: 6em;
-  cursor: pointer;
-  user-select: none;
-}
 .container {
-  width: 100%;
   min-height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -68,6 +63,10 @@ body {
     border: none;
     user-select: none;
   }
+}
+.logo {
+  width: 6em;
+  cursor: pointer;
 }
 .footer {
   flex-shrink: 0;
