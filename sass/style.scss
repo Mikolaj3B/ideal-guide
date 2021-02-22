@@ -29,6 +29,7 @@ body {
 .logo {
   width: 6em;
   cursor: pointer;
+  user-select: none;
 }
 .container {
   width: 100%;
@@ -65,6 +66,7 @@ body {
   }
   .transition {
     border: none;
+    user-select: none;
   }
 }
 .footer {
