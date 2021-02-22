@@ -11,7 +11,6 @@
 }
 @mixin imgformat {
   width: 15em;
-  align-self: center;
   cursor: pointer;
 }
 html,
@@ -23,9 +22,14 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #000;
+  background-color: #000000;
   background-image: url("imgs/bg.png");
   background-size: 100% 150%;
+}
+.logo {
+  width: 5em;
+  position: absolute;
+  cursor: pointer;
 }
 .container {
   width: 100%;
@@ -42,20 +46,27 @@ body {
       text-align: center;
       font-size: 60px;
       @include mytext();
+      margin-top: -100px;
     }
   }
   .nav {
-    margin-top: 20em;
+    margin-top: 30em;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    width: 100%;
   }
   .nav__chess {
+    border: none;
+  }
+  .nav__chess--image {
     @include imgformat();
-
     margin-right: 2em;
   }
   .nav__chart {
+    border: none;
+  }
+  .nav__chart--image {
     @include imgformat();
     margin-left: 2em;
   }

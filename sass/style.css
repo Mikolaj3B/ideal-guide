@@ -9,9 +9,15 @@ body {
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background-color: #000;
+  background-color: #000000;
   background-image: url("imgs/bg.png");
   background-size: 100% 150%;
+}
+
+.logo {
+  width: 5em;
+  position: absolute;
+  cursor: pointer;
 }
 
 .container {
@@ -50,35 +56,39 @@ body {
   font-variant: small-caps;
   text-transform: lowercase;
   font-family: Georgia, serif;
+  margin-top: -100px;
 }
 
 .container .nav {
-  margin-top: 20em;
+  margin-top: 30em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
 }
 
 .container .nav__chess {
+  border: none;
+}
+
+.container .nav__chess--image {
   width: 15em;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
   cursor: pointer;
   margin-right: 2em;
 }
 
 .container .nav__chart {
+  border: none;
+}
+
+.container .nav__chart--image {
   width: 15em;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
   cursor: pointer;
   margin-left: 2em;
 }

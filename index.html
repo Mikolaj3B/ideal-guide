@@ -7,39 +7,66 @@
     <meta name="author" content="Mikołaj Zięba" />
     <link rel="stylesheet" href="sass/style.css" />
     <link rel="stylesheet" href="sass/style.css.map" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+    <script src="Animejs/lib/anime.min.js"></script>
+    <script src="subpages/chess/js/jquery-3.5.1.js"></script>
+    <script type="text/javascript" src="subpages/chess/js/custom.js"></script>
     <title>Mikołaj Zięba</title>
   </head>
   <body>
+    <img
+      src="sass/imgs/logo-2.png"
+      alt="logo-missing"
+      class="logo"
+      onclick="refresh()"
+    />
     <div class="container">
       <header class="header">
         <h1 class="header__h1">Mikołaj Zięba</h1>
       </header>
       <nav class="nav">
-        <img
-          id="chess"
-          onclick="chess()"
-          src="sass/imgs/king.png"
-          alt="chess-missing"
-          class="nav__chess"
-        />
-        <img
-          id="chart"
-          onclick="chart()"
-          src="sass/imgs/chart.png"
-          alt="chart-missing"
-          class="nav__chart"
-        />
+        <a href="subpages/chess/index.html" class="nav__chess transition"
+          ><img
+            src="sass/imgs/king.png"
+            alt="king-missing"
+            class="nav__chess--image"
+        /></a>
+        <a href="subpages/sorting/index.html" class="nav__chart transition"
+          ><img
+            src="sass/imgs/chart.png"
+            alt="king-missing"
+            class="nav__chart--image"
+        /></a>
       </nav>
     </div>
     <footer class="footer">Mikołaj Zięba 2021 &copy</footer>
   </body>
 </html>
 <script>
-  function chess() {
-    window.location.href = "subpages/chess/index.html";
+  function refresh() {
+    window.location.href = "index.html";
   }
-  function chart() {
-    window.location.href = "subpages/sorting/index.html";
-  }
+  anime({
+    targets: ".nav__chess",
+    keyframes: [{ translateX: 650 }],
+    duration: 2000,
+    easing: "easeOutElastic(1, .8)",
+  });
+  anime({
+    targets: ".nav__chart",
+    keyframes: [{ translateX: -650 }],
+    duration: 2000,
+    easing: "easeOutElastic(1, .8)",
+  });
+  anime({
+    targets: ".header__h1",
+    keyframes: [{ translateY: 160 }, { fontSize: 80 }],
+    duration: 2000,
+    easing: "easeOutElastic(1, .8)",
+  });
+  anime({
+    targets: ".footer",
+    keyframes: [{ translateX: -160 }, { translateX: -15 }],
+    duration: 2000,
+    easing: "easeOutElastic(1, .8)",
+  });
 </script>

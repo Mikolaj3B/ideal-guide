@@ -2,11 +2,11 @@
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
-  background-color: #edebe9;
+  background-color: #000000;
   background-image: url("https://wallpaperaccess.com/full/1698006.jpg");
   background-size: 100% 150%;
 }
@@ -21,7 +21,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+      flex-wrap: wrap;
   margin-top: -6em;
 }
 
@@ -31,13 +31,13 @@ body {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-top: 5em;
   margin-left: 3em;
   font-size: larger;
   -ms-flex-preferred-size: 15%;
-  flex-basis: 15%;
+      flex-basis: 15%;
   background-image: url("https://i.pinimg.com/originals/7f/6b/2d/7f6b2dc31228ae3de478d36d93542d6b.jpg");
   border-radius: 15px;
   border: 3px solid #502323;
@@ -57,15 +57,15 @@ body {
   justify-self: flex-end;
   height: 100%;
   -ms-flex-preferred-size: 100%;
-  flex-basis: 100%;
+      flex-basis: 100%;
   text-align: end;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: reverse;
-  -ms-flex-direction: column-reverse;
-  flex-direction: column-reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
 }
 
 .chessboard__column {
@@ -86,9 +86,9 @@ body {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+      flex-wrap: wrap;
   -ms-flex-preferred-size: 12%;
-  flex-basis: 12%;
+      flex-basis: 12%;
   margin-top: 5em;
   margin-right: 1em;
   background-image: url("https://i.pinimg.com/originals/7f/6b/2d/7f6b2dc31228ae3de478d36d93542d6b.jpg");
@@ -151,13 +151,13 @@ i {
     margin: 0 auto;
     margin-top: 2em;
     -ms-flex-preferred-size: 100%;
-    flex-basis: 100%;
+        flex-basis: 100%;
   }
   .opening {
     margin: 0 auto;
     margin-top: 2em;
     -ms-flex-preferred-size: 100%;
-    flex-basis: 100%;
+        flex-basis: 100%;
     text-align: center;
   }
   .opening > * {
@@ -189,13 +189,13 @@ i {
     margin: 0 auto;
     margin-top: 2em;
     -ms-flex-preferred-size: 40%;
-    flex-basis: 40%;
+        flex-basis: 40%;
   }
   .opening {
     margin: 0 auto;
     margin-top: 2em;
     -ms-flex-preferred-size: 100%;
-    flex-basis: 100%;
+        flex-basis: 100%;
     text-align: center;
   }
   .opening > * {
@@ -225,7 +225,7 @@ i {
   }
   .list {
     -ms-flex-preferred-size: 40%;
-    flex-basis: 40%;
+        flex-basis: 40%;
     margin: 0 auto;
     margin-top: 2em;
   }
@@ -233,7 +233,7 @@ i {
     margin: 0 auto;
     margin-top: 2em;
     -ms-flex-preferred-size: 100%;
-    flex-basis: 100%;
+        flex-basis: 100%;
     text-align: center;
   }
   .opening > * {
@@ -264,13 +264,13 @@ i {
     margin: 0 auto;
     margin-top: 2em;
     -ms-flex-preferred-size: 30%;
-    flex-basis: 30%;
+        flex-basis: 30%;
   }
   .opening {
     margin: 0 auto;
     margin-top: 2em;
     -ms-flex-preferred-size: 100%;
-    flex-basis: 100%;
+        flex-basis: 100%;
     text-align: center;
   }
   .opening > * {
@@ -298,13 +298,13 @@ i {
     margin: 0 auto;
     margin-top: 2em;
     -ms-flex-preferred-size: 30%;
-    flex-basis: 30%;
+        flex-basis: 30%;
   }
   .opening {
     margin: 0 auto;
     margin-top: 2em;
     -ms-flex-preferred-size: 100%;
-    flex-basis: 100%;
+        flex-basis: 100%;
     text-align: center;
   }
   .opening > * {

@@ -6,18 +6,20 @@
     <title>Strona główna</title>
     <link rel="stylesheet" href="sass/style.css" />
     <link rel="stylesheet" href="sass/style.css.map" />
-    <link rel="stylesheet" href="sass/style-grid-fixed.css">
+    <link rel="stylesheet" href="sass/style-grid-fixed.css" />
+    <script type="text/javascript" src="js/jquery-3.5.1.js"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
   </head>
   <body onload="rysowaniedomyslne()">
     <img
-      src="css/png/60577.png"
+      src="sass/png/60577.png"
       alt="arrow-missing"
       class="arrow"
       onclick="goback()"
     />
     <div class="container">
       <div class="opening">
-        <i id="name" class="opening__name"> </i>
+        <i id="name" class="opening__name transition"> </i>
         <i id="first"> </i>
         <i id="second"> </i>
         <i id="third"> </i>
@@ -174,18 +176,18 @@
       //[2][3] = 3*8+3
       //[0][6]=49 [7][6]=56
       //ułatwiony zapis ścieżki
-      pawnw = "css/png/pawnw.png";
-      bishopw = "css/png/bishopw.png";
-      knightw = "css/png/knightw.png";
-      queenw = "css/png/queenw.png";
-      kingw = "css/png/kingw.png";
-      rookw = "css/png/rookw.png";
-      pawn = "css/png/pawn.png";
-      bishop = "css/png/bishop.png";
-      knight = "css/png/knight.png";
-      queen = "css/png/queen.png";
-      king = "css/png/king.png";
-      rook = "css/png/rook.png";
+      pawnw = "sass/png/pawnw.png";
+      bishopw = "sass/png/bishopw.png";
+      knightw = "sass/png/knightw.png";
+      queenw = "sass/png/queenw.png";
+      kingw = "sass/png/kingw.png";
+      rookw = "sass/png/rookw.png";
+      pawn = "sass/png/pawn.png";
+      bishop = "sass/png/bishop.png";
+      knight = "sass/png/knight.png";
+      queen = "sass/png/queen.png";
+      king = "sass/png/king.png";
+      rook = "sass/png/rook.png";
       //rysowanie ustawienia domyslnego
       function czyszczenie() {
         document.getElementById("name").innerHTML = "";
