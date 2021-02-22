@@ -16,7 +16,6 @@ body {
 
 .logo {
   width: 6em;
-  position: absolute;
   cursor: pointer;
 }
 
@@ -73,24 +72,20 @@ body {
   width: 100%;
 }
 
-.container .nav__chess {
-  border: none;
-}
-
 .container .nav__chess--image {
   width: 15em;
   cursor: pointer;
   margin-right: 2em;
 }
 
-.container .nav__chart {
-  border: none;
-}
-
 .container .nav__chart--image {
   width: 15em;
   cursor: pointer;
   margin-left: 2em;
+}
+
+.container .transition {
+  border: none;
 }
 
 .footer {
