@@ -11,12 +11,13 @@
     <script type="text/javascript" src="js/custom.js"></script>
   </head>
   <body onload="rysowaniedomyslne()">
-    <img
-      src="sass/png/60577.png"
-      alt="arrow-missing"
-      class="arrow"
-      onclick="goback()"
-    />
+    <a href="/index.html" class="transition"
+      ><img
+        src="sass/png/60577.png"
+        alt="arrow-missing"
+        class="arrow"
+        onclick="goback()"
+    /></a>
     <div class="container">
       <div class="opening">
         <i id="name" class="opening__name transition"> </i>
@@ -128,9 +129,6 @@
     </div>
 
     <script>
-      function goback() {
-        window.location.href = "/index.html";
-      }
       //wylaczanie wyswietlania bledu wyswietlania obrazu
       document.addEventListener("DOMContentLoaded", function (event) {
         document.querySelectorAll("img").forEach(function (img) {
