@@ -1,0 +1,71 @@
+@mixin mytext {
+  letter-spacing: 1.6px;
+  word-spacing: 2px;
+  color: #ffffff;
+  font-weight: normal;
+  text-decoration: none;
+  font-style: normal;
+  font-variant: small-caps;
+  text-transform: lowercase;
+  font-family: Georgia, serif;
+}
+@mixin imgformat {
+  width: 15em;
+  align-self: center;
+  cursor: pointer;
+}
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #000;
+  background-image: url("imgs/bg.png");
+  background-size: 100% 150%;
+}
+.container {
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  color: #ffffff;
+  .header {
+    justify-content: center;
+    flex-basis: 100%;
+    height: 30%;
+    .header__h1 {
+      text-align: center;
+      font-size: 60px;
+      @include mytext();
+    }
+  }
+  .nav {
+    margin-top: 20em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .nav__chess {
+    @include imgformat();
+
+    margin-right: 2em;
+  }
+  .nav__chart {
+    @include imgformat();
+    margin-left: 2em;
+  }
+}
+.footer {
+  flex-shrink: 0;
+  color: #ffffff;
+  height: 50px;
+  margin-top: -50px;
+  text-align: right;
+  font-size: 40px;
+  @include mytext();
+}

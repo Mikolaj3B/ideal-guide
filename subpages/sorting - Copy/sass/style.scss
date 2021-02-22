@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.arrow {
+  width: 6em;
+  cursor: pointer;
+}
+body {
+  background-color: black;
+}
+.work {
+  position: absolute;
+  left: 35%;
+  margin-top: 10em;
+}
