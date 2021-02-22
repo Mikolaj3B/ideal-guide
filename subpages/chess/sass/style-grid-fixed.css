@@ -1,0 +1,49 @@
+.chessboard {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (100px, 8);
+  grid-template-columns: repeat(8, 100px);
+  -ms-grid-rows: (100px, 8);
+  grid-template-rows: repeat(8, 100px);
+}
+
+@media (max-width: 670px) {
+  .chessboard {
+    -ms-grid-columns: (50px, 8);
+    grid-template-columns: repeat(8, 50px);
+    -ms-grid-rows: (50px, 8);
+    grid-template-rows: repeat(8, 50px);
+  }
+}
+@media (min-width: 1020px) and (max-width: 1200px) {
+  .chessboard {
+    -ms-grid-columns: (120px, 8);
+    grid-template-columns: repeat(8, 120px);
+    -ms-grid-rows: (120px, 8);
+    grid-template-rows: repeat(8, 120px);
+  }
+}
+@media (min-width: 856px) and (max-width: 1020px) {
+  .chessboard {
+    -ms-grid-columns: (100px, 8);
+    grid-template-columns: repeat(8, 100px);
+    -ms-grid-rows: (100px, 8);
+    grid-template-rows: repeat(8, 100px);
+  }
+}
+@media (min-width: 670px) and (max-width: 856px) {
+  .chessboard {
+    -ms-grid-columns: (80px, 8);
+    grid-template-columns: repeat(8, 80px);
+    -ms-grid-rows: (80px, 8);
+    grid-template-rows: repeat(8, 80px);
+  }
+}
+@media (min-width: 570px) and (max-width: 670px) {
+  .chessboard {
+    -ms-grid-columns: (65px, 8);
+    grid-template-columns: repeat(8, 65px);
+    -ms-grid-rows: (65px, 8);
+    grid-template-rows: repeat(8, 65px);
+  }
+}
