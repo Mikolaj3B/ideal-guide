@@ -30,11 +30,8 @@ body {
   background-size: 100% 75%;
 }
 .chessboard {
-  display: grid;
   margin: 0 auto;
   margin-top: 5em;
-  grid-template-columns: repeat(8, 100px);
-  grid-template-rows: repeat(8, 100px);
   padding: 1.5em;
   background-image: url("https://img.freepik.com/free-photo/photo-texture-old-faded-paper_105034-424.jpg?size=338&ext=jpg");
   border-radius: 15px;
@@ -104,10 +101,6 @@ i {
   .calosc {
     margin-top: -2em;
   }
-  .chessboard {
-    grid-template-columns: repeat(8, 50px);
-    grid-template-rows: repeat(8, 50px);
-  }
   .chessboard__column {
     bottom: -50px;
   }
@@ -142,10 +135,6 @@ i {
 @media (min-width: 1020px) and (max-width: 1200px) {
   .calosc {
     margin-top: -1em;
-  }
-  .chessboard {
-    grid-template-columns: repeat(8, 120px);
-    grid-template-rows: repeat(8, 120px);
   }
   .chessboard__column {
     bottom: -120px;
@@ -182,10 +171,6 @@ i {
   .calosc {
     margin-top: -1em;
   }
-  .chessboard {
-    grid-template-columns: repeat(8, 100px);
-    grid-template-rows: repeat(8, 100px);
-  }
   .chessboard__column {
     bottom: -100px;
   }
@@ -221,10 +206,6 @@ i {
   .calosc {
     margin-top: -1em;
   }
-  .chessboard {
-    grid-template-columns: repeat(8, 80px);
-    grid-template-rows: repeat(8, 80px);
-  }
   .chessboard__column {
     bottom: -80px;
   }
@@ -256,10 +237,6 @@ i {
   }
 }
 @media (min-width: 570px) and (max-width: 670px) {
-  .chessboard {
-    grid-template-columns: repeat(8, 65px);
-    grid-template-rows: repeat(8, 65px);
-  }
   .chessboard__column {
     bottom: -65px;
   }
