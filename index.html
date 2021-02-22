@@ -14,11 +14,7 @@
   </head>
   <body>
     <a href="index.html" class="transition">
-      <img
-        src="sass/imgs/logo-2.png"
-        alt="logo-missing"
-        class="logo"
-        onclick="refresh()"
+      <img src="sass/imgs/logo-2.png" alt="logo-missing" class="logo"
     /></a>
     <div class="container">
       <header class="header">
@@ -45,9 +41,6 @@
   </body>
 </html>
 <script>
-  function refresh() {
-    window.location.href = "index.html";
-  }
   anime({
     targets: ".nav__chess",
     keyframes: [{ translateX: 650 }],
