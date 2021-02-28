@@ -6,16 +6,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="sass/style.css" />
     <link rel="stylesheet" href="sass/style.css.map" />
+    <script src="Animejs/lib/anime.min.js"></script>
     <script type="text/javascript" src="js/jquery-3.5.1.js"></script>
     <script type="text/javascript" src="js/custom.js"></script>
     <title>Sortowanie</title>
   </head>
   <body>
     <div class="container">
-      <a href="/index.html" class="transition">
-        <img src="sass/imgs/logo-2.png" alt="logo-missing" class="logo" />
-      </a>
-      <main class="main"></main>
+      <header class="header">
+        <a href="/index.html" class="header__transition">
+          <img
+            src="sass/imgs/logo-2.png"
+            alt="logo-missing"
+            class="header__transition--logo"
+          />
+        </a>
+        <h1 class="header__h1">Mikołaj Zięba</h1>
+      </header>
+      <main class="main">
+        <article class="main__article">
+          <img
+            src="sass/imgs/index.png"
+            alt="error"
+            class="main__article--stats"
+          />
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum
+          accusantium iusto minima ipsam sed distinctio dignissimos quibusdam
+          labore aut fuga omnis facere, soluta impedit aperiam rem,
+          exercitationem velit nemo? Necessitatibus atque ea neque cumque
+          fugiat, doloribus esse a praesentium at enim id ipsa excepturi
+          accusamus, nemo nihil fuga, eius doloremque culpa similique. Aperiam
+          necessitatibus quis molestias, obcaecati aliquid earum quidem aliquam,
+          beatae repellat atque nobis ullam id ipsum voluptatibus, quasi
+          assumenda nam incidunt minus quos dicta rerum sunt enim. Officiis qui
+          expedita distinctio, iure laborum odit ad eum illo ipsa, unde dolor
+          nihil, necessitatibus dolore eligendi cumque animi sapiente. Quisquam
+          dolorum culpa possimus voluptatibus, soluta ducimus dolorem neque
+          nostrum est laboriosam molestiae eligendi id pariatur mollitia magnam
+          illo dicta veniam aliquid. Nostrum ab dolor esse ipsa corporis. Amet
+          cupiditate iste atque quod neque, quibusdam autem. Sed iste inventore
+          voluptatum blanditiis facilis unde rerum at expedita necessitatibus
+          amet reiciendis velit repudiandae laborum veniam labore modi,
+          praesentium totam quos optio qui doloribus. Hic tempore debitis quasi
+          expedita minus laborum neque et at illum accusantium atque sunt
+          voluptatum corporis dolores, mollitia quaerat quibusdam fuga
+          architecto distinctio dolorem impedit obcaecati voluptas nobis?
+          Voluptatum perferendis soluta, est atque aperiam a? Et, ad praesentium
+          itaque excepturi odio rem quidem? Corporis voluptatem reiciendis
+          perferendis iure voluptatibus cupiditate dolor! Enim corrupti
+          necessitatibus impedit repellat molestias. Error ipsa labore eos,
+          officia voluptates ad obcaecati ab saepe quod impedit sed fugit
+          deleniti itaque veritatis minus velit! Sunt non odio error magni
+          placeat itaque quaerat illum, dignissimos quidem qui, magnam odit.
+        </article>
+      </main>
     </div>
+    <footer class="footer">Mikołaj Zięba 2021 &copy</footer>
+    <script>
+      anime({
+        targets: ".footer",
+        keyframes: [{ translateX: -160 }, { translateX: -15 }],
+        duration: 2000,
+        easing: "easeOutElastic(1, .8)",
+      });
+    </script>
   </body>
 </html>

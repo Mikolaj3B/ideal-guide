@@ -79,7 +79,7 @@ body {
   margin-left: 2em;
 }
 
-.container .transition {
+.container .header__transition {
   border: none;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -87,7 +87,7 @@ body {
           user-select: none;
 }
 
-.logo {
+.header__transition--logo {
   width: 6em;
   cursor: pointer;
 }

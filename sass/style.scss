@@ -59,12 +59,12 @@ body {
     @include imgformat();
     margin-left: 2em;
   }
-  .transition {
+  .header__transition {
     border: none;
     user-select: none;
   }
 }
-.logo {
+.header__transition--logo {
   width: 6em;
   cursor: pointer;
 }
