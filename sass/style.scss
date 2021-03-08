@@ -33,40 +33,40 @@ body {
   flex-direction: column;
   flex-wrap: wrap;
   color: #ffffff;
-  .header {
-    justify-content: center;
-    flex-basis: 100%;
-    height: 30%;
-    .header__h1 {
-      text-align: center;
-      font-size: 60px;
-      @include mytext();
-      margin-top: -100px;
+}
+.header {
+  justify-content: center;
+  flex-basis: 100%;
+  height: 30%;
+  &__h1 {
+    text-align: center;
+    font-size: 60px;
+    @include mytext();
+    margin-top: -100px;
+  }
+  &__transition {
+    border: none;
+    user-select: none;
+    &--logo {
+      width: 6em;
+      cursor: pointer;
     }
   }
-  .nav {
-    margin-top: 30em;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-  }
-  .nav__chess--image {
+}
+.nav {
+  margin-top: 30em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  &__chess--image {
     @include imgformat();
     margin-right: 2em;
   }
-  .nav__chart--image {
+  &__chart--image {
     @include imgformat();
     margin-left: 2em;
   }
-  .header__transition {
-    border: none;
-    user-select: none;
-  }
-}
-.header__transition--logo {
-  width: 6em;
-  cursor: pointer;
 }
 .footer {
   flex-shrink: 0;

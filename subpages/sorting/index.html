@@ -6,12 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="sass/style.css" />
     <link rel="stylesheet" href="sass/style.css.map" />
+    <link rel="stylesheet" href="sass/grid-fixed.css" />
     <script src="Animejs/lib/anime.min.js"></script>
     <script type="text/javascript" src="js/jquery-3.5.1.js"></script>
     <script type="text/javascript" src="js/custom.js"></script>
-    <title>Sortowanie</title>
+    <title>Gallery</title>
   </head>
   <body>
+    <video
+      playsinline
+      autoplay
+      muted
+      loop
+      poster=""
+      id="bgvid"
+      class="background"
+    >
+      <source src="sass/imgs/bg.mp4" type="video/mp4" />
+    </video>
     <div class="container">
       <header class="header">
         <a href="/index.html" class="header__transition">
@@ -21,48 +33,284 @@
             class="header__transition--logo"
           />
         </a>
-        <h1 class="header__h1">Mikołaj Zięba</h1>
+        <h1 class="header__h1">gallery</h1>
       </header>
-      <main class="main">
-        <article class="main__article">
+      <main class="gallery">
+        <div class="gallery__items" id="item1">
           <img
-            src="sass/imgs/index.png"
+            src="sass/imgs/gallery/1.jpg"
             alt="error"
-            class="main__article--stats"
+            class="gallery__items--images"
+            id="1"
+            onclick="zoom1()"
           />
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum
-          accusantium iusto minima ipsam sed distinctio dignissimos quibusdam
-          labore aut fuga omnis facere, soluta impedit aperiam rem,
-          exercitationem velit nemo? Necessitatibus atque ea neque cumque
-          fugiat, doloribus esse a praesentium at enim id ipsa excepturi
-          accusamus, nemo nihil fuga, eius doloremque culpa similique. Aperiam
-          necessitatibus quis molestias, obcaecati aliquid earum quidem aliquam,
-          beatae repellat atque nobis ullam id ipsum voluptatibus, quasi
-          assumenda nam incidunt minus quos dicta rerum sunt enim. Officiis qui
-          expedita distinctio, iure laborum odit ad eum illo ipsa, unde dolor
-          nihil, necessitatibus dolore eligendi cumque animi sapiente. Quisquam
-          dolorum culpa possimus voluptatibus, soluta ducimus dolorem neque
-          nostrum est laboriosam molestiae eligendi id pariatur mollitia magnam
-          illo dicta veniam aliquid. Nostrum ab dolor esse ipsa corporis. Amet
-          cupiditate iste atque quod neque, quibusdam autem. Sed iste inventore
-          voluptatum blanditiis facilis unde rerum at expedita necessitatibus
-          amet reiciendis velit repudiandae laborum veniam labore modi,
-          praesentium totam quos optio qui doloribus. Hic tempore debitis quasi
-          expedita minus laborum neque et at illum accusantium atque sunt
-          voluptatum corporis dolores, mollitia quaerat quibusdam fuga
-          architecto distinctio dolorem impedit obcaecati voluptas nobis?
-          Voluptatum perferendis soluta, est atque aperiam a? Et, ad praesentium
-          itaque excepturi odio rem quidem? Corporis voluptatem reiciendis
-          perferendis iure voluptatibus cupiditate dolor! Enim corrupti
-          necessitatibus impedit repellat molestias. Error ipsa labore eos,
-          officia voluptates ad obcaecati ab saepe quod impedit sed fugit
-          deleniti itaque veritatis minus velit! Sunt non odio error magni
-          placeat itaque quaerat illum, dignissimos quidem qui, magnam odit.
-        </article>
+          <p class="gallery__items--texts">Image_1</p>
+        </div>
+        <div class="gallery__items" id="item2">
+          <img
+            src="sass/imgs/gallery/2.jpg"
+            alt="error"
+            class="gallery__items--images"
+            id="2"
+            onclick="zoom2()"
+          />
+          <p class="gallery__items--texts">Image_2</p>
+        </div>
+        <div class="gallery__items" id="item3">
+          <img
+            src="sass/imgs/gallery/3.jpg"
+            alt="error"
+            class="gallery__items--images"
+            id="3"
+            onclick="zoom3()"
+          />
+          <p class="gallery__items--texts" id="text3">Image_3</p>
+        </div>
+        <div class="gallery__items" id="item4">
+          <img
+            src="sass/imgs/gallery/4.jpg"
+            alt="error"
+            class="gallery__items--images"
+            id="4"
+            onclick="zoom4()"
+          />
+          <p class="gallery__items--texts">Image_4</p>
+        </div>
+        <div class="gallery__items" id="item5">
+          <img
+            src="sass/imgs/gallery/5.jpg"
+            alt="error"
+            class="gallery__items--images"
+            id="5"
+            onclick="zoom5()"
+          />
+          <p class="gallery__items--texts">Image_5</p>
+        </div>
+        <div class="gallery__items" id="item6">
+          <img
+            src="sass/imgs/gallery/6.jpg"
+            alt="error"
+            class="gallery__items--images"
+            id="6"
+            onclick="zoom6()"
+          />
+          <p class="gallery__items--texts" id="text6">Image_6</p>
+        </div>
       </main>
     </div>
     <footer class="footer">Mikołaj Zięba 2021 &copy</footer>
     <script>
+      let img1 = document.getElementById("1");
+      let scale1 = img1.scale;
+      let hidden1 = false;
+      function zoom1() {
+        console.log(scale1);
+        if (scale1 > 1.11) {
+          scale1 = 1.0;
+        } else {
+          scale1 = 2.7;
+        }
+        img1.style.transform = "scale(" + scale1 + ")";
+
+        if (hidden1 == false) {
+          hidden1 = true;
+        } else {
+          hidden1 = false;
+        }
+        if (hidden1 == true) {
+          document.getElementById("item2").style.visibility = "hidden";
+          document.getElementById("item3").style.visibility = "hidden";
+          document.getElementById("item4").style.visibility = "hidden";
+          document.getElementById("item5").style.visibility = "hidden";
+          document.getElementById("item6").style.visibility = "hidden";
+          img1.style.marginLeft = "39em";
+          img1.style.marginTop = "5em";
+        } else {
+          document.getElementById("item2").style.visibility = "visible";
+          document.getElementById("item3").style.visibility = "visible";
+          document.getElementById("item4").style.visibility = "visible";
+          document.getElementById("item5").style.visibility = "visible";
+          document.getElementById("item6").style.visibility = "visible";
+          img1.style.marginLeft = "0";
+          img1.style.marginTop = "0";
+        }
+      }
+      let img2 = document.getElementById("2");
+      let scale2 = img2.scale;
+      let hidden2 = false;
+      function zoom2() {
+        console.log(scale2);
+        if (scale2 > 1.11) {
+          scale2 = 1.0;
+        } else {
+          scale2 = 2.7;
+        }
+        img2.style.transform = "scale(" + scale2 + ")";
+
+        if (hidden2 == false) {
+          hidden2 = true;
+        } else {
+          hidden2 = false;
+        }
+        if (hidden2 == true) {
+          document.getElementById("item1").style.visibility = "hidden";
+          document.getElementById("item3").style.visibility = "hidden";
+          document.getElementById("item4").style.visibility = "hidden";
+          document.getElementById("item5").style.visibility = "hidden";
+          document.getElementById("item6").style.visibility = "hidden";
+          img2.style.marginLeft = "0em";
+          img2.style.marginTop = "5em";
+        } else {
+          document.getElementById("item1").style.visibility = "visible";
+          document.getElementById("item3").style.visibility = "visible";
+          document.getElementById("item4").style.visibility = "visible";
+          document.getElementById("item5").style.visibility = "visible";
+          document.getElementById("item6").style.visibility = "visible";
+          img2.style.marginLeft = "0";
+          img2.style.marginTop = "0";
+        }
+      }
+      let img3 = document.getElementById("3");
+      let scale3 = img3.scale;
+      let hidden3 = false;
+      function zoom3() {
+        console.log(scale3);
+        if (scale3 > 1.11) {
+          scale3 = 1.0;
+        } else {
+          scale3 = 2.7;
+        }
+        img3.style.transform = "scale(" + scale3 + ")";
+
+        if (hidden3 == false) {
+          hidden3 = true;
+        } else {
+          hidden3 = false;
+        }
+        if (hidden3 == true) {
+          document.getElementById("item1").style.visibility = "hidden";
+          document.getElementById("item2").style.visibility = "hidden";
+          document.getElementById("item4").style.visibility = "hidden";
+          document.getElementById("item5").style.visibility = "hidden";
+          document.getElementById("item6").style.visibility = "hidden";
+
+          img3.style.marginLeft = "-33em";
+          img3.style.marginTop = "5em";
+        } else {
+          document.getElementById("item1").style.visibility = "visible";
+          document.getElementById("item2").style.visibility = "visible";
+          document.getElementById("item4").style.visibility = "visible";
+          document.getElementById("item5").style.visibility = "visible";
+          document.getElementById("item6").style.visibility = "visible";
+          img3.style.marginLeft = "0";
+          img3.style.marginTop = "0";
+        }
+      }
+      let img4 = document.getElementById("4");
+      let scale4 = img4.scale;
+      let hidden4 = false;
+      function zoom4() {
+        console.log(scale4);
+        if (scale4 > 1.11) {
+          scale4 = 1.0;
+        } else {
+          scale4 = 2.7;
+        }
+        img4.style.transform = "scale(" + scale4 + ")";
+
+        if (hidden4 == false) {
+          hidden4 = true;
+        } else {
+          hidden4 = false;
+        }
+        if (hidden4 == true) {
+          document.getElementById("item1").style.visibility = "hidden";
+          document.getElementById("item2").style.visibility = "hidden";
+          document.getElementById("item3").style.visibility = "hidden";
+          document.getElementById("item5").style.visibility = "hidden";
+          document.getElementById("item6").style.visibility = "hidden";
+          img4.style.marginLeft = "39em";
+          img4.style.marginTop = "-17em";
+        } else {
+          document.getElementById("item1").style.visibility = "visible";
+          document.getElementById("item2").style.visibility = "visible";
+          document.getElementById("item3").style.visibility = "visible";
+          document.getElementById("item5").style.visibility = "visible";
+          document.getElementById("item6").style.visibility = "visible";
+          img4.style.marginLeft = "0";
+          img4.style.marginTop = "0";
+        }
+      }
+      let img5 = document.getElementById("5");
+      let scale5 = img5.scale;
+      let hidden5 = false;
+      function zoom5() {
+        console.log(scale5);
+        if (scale5 > 1.11) {
+          scale5 = 1.0;
+        } else {
+          scale5 = 2.7;
+        }
+        img5.style.transform = "scale(" + scale5 + ")";
+
+        if (hidden5 == false) {
+          hidden5 = true;
+        } else {
+          hidden5 = false;
+        }
+        if (hidden5 == true) {
+          document.getElementById("item1").style.visibility = "hidden";
+          document.getElementById("item2").style.visibility = "hidden";
+          document.getElementById("item3").style.visibility = "hidden";
+          document.getElementById("item4").style.visibility = "hidden";
+          document.getElementById("item6").style.visibility = "hidden";
+          img5.style.marginLeft = "0em";
+          img5.style.marginTop = "-17em";
+        } else {
+          document.getElementById("item1").style.visibility = "visible";
+          document.getElementById("item2").style.visibility = "visible";
+          document.getElementById("item3").style.visibility = "visible";
+          document.getElementById("item4").style.visibility = "visible";
+          document.getElementById("item6").style.visibility = "visible";
+          img5.style.marginLeft = "0";
+          img5.style.marginTop = "0";
+        }
+      }
+      let img6 = document.getElementById("6");
+      let scale6 = img6.scale;
+      let hidden6 = false;
+      function zoom6() {
+        console.log(scale6);
+        if (scale6 > 1.11) {
+          scale6 = 1.0;
+        } else {
+          scale6 = 2.7;
+        }
+        img6.style.transform = "scale(" + scale6 + ")";
+
+        if (hidden6 == false) {
+          hidden6 = true;
+        } else {
+          hidden6 = false;
+        }
+        if (hidden6 == true) {
+          document.getElementById("item1").style.visibility = "hidden";
+          document.getElementById("item2").style.visibility = "hidden";
+          document.getElementById("item3").style.visibility = "hidden";
+          document.getElementById("item4").style.visibility = "hidden";
+          document.getElementById("item5").style.visibility = "hidden";
+          img6.style.marginLeft = "-33em";
+          img6.style.marginTop = "-17em";
+        } else {
+          document.getElementById("item1").style.visibility = "visible";
+          document.getElementById("item2").style.visibility = "visible";
+          document.getElementById("item3").style.visibility = "visible";
+          document.getElementById("item4").style.visibility = "visible";
+          document.getElementById("item5").style.visibility = "visible";
+          img6.style.marginLeft = "0";
+          img6.style.marginTop = "0";
+        }
+      }
       anime({
         targets: ".footer",
         keyframes: [{ translateX: -160 }, { translateX: -15 }],
